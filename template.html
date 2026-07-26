@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[NOMBRE] - [CARGO]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{font-family:'Inter',sans-serif}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .animate-marquee{animation:marquee 30s linear infinite}
+    .animate-marquee:hover{animation-play-state:paused}
+    .btn-hover{position:relative;overflow:hidden;transition:all .4s ease}
+    .btn-hover::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:1.5rem;transform:translateX(-100%);transition:transform .4s ease}
+    .btn-hover:hover::before{transform:translateX(0)}
+    .btn-dark::before{background:#a3e635}
+    .btn-dark:hover .btn-text{color:#000}
+    .arrow-icon{transition:transform .3s ease}
+    .btn-hover:hover .arrow-icon{transform:translateX(4px)}
+    .card-hover{transition:transform .3s ease,box-shadow .3s ease,background-color .3s ease,border-color .3s ease}
+    .card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.1);background-color:#a3e635;border-color:#a3e635}
+    .project-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);opacity:0;transition:opacity .4s ease;border-radius:1rem}
+    .project-card:hover .project-overlay{opacity:1}
+    .project-card:hover img{transform:scale(1.05)}
+    .project-card img{transition:transform .6s ease}
+    .service-item{transition:all .4s ease;cursor:pointer}
+    .service-item:hover{background:#f5f5f5;padding-left:1rem;padding-right:1rem;border-radius:1rem}
+    .social-icon{transition:transform .3s ease,background-color .3s ease}
+    .social-icon:hover{transform:scale(1.15);background-color:rgba(163,230,53,.5)}
+    .nav-link{position:relative}
+    .nav-link::after{content:'';position:absolute;bottom:-4px;left:50%;width:0;height:2px;background:#a3e635;transition:width .3s ease,left .3s ease}
+    .nav-link:hover::after{width:100%;left:0}
+    .tag-hover{transition:all .3s ease;cursor:pointer}
+    .tag-hover:hover{background:#a3e635;color:#000;border-color:#a3e635}
+    .exp-row{transition:all .3s ease}
+    .exp-row:hover{background:#f5f5f5;padding-left:1rem;padding-right:1rem;border-radius:1rem}
+    .btn-green-hover{transition:all .3s ease}
+    .btn-green-hover:hover{background:#a3e635!important;color:#000!important;border-color:#a3e635!important}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="text-neutral-600 text-lg min-h-full">
+
+  <!-- HEADER -->
+  <header class="items-center border-b-zinc-300 border-b-2 justify-center px-9 flex min-h-[4.81rem] border-solid">
+    <div class="items-center justify-between py-3 flex w-full max-w-[87.50rem] m-auto">
+      <a class="text-xl font-bold text-black" href="#">[NOMBRE]</a>
+      <nav>
+        <ul class="items-center flex list-none gap-1">
+          <li class="font-medium"><a class="px-3 inline-block nav-link" href="#">Inicio</a></li>
+          <li class="font-medium"><a class="px-3 inline-block nav-link" href="#about">Acerca de</a></li>
+          <li class="font-medium"><a class="px-3 inline-block nav-link" href="#experience">Experiencia</a></li>
+          <li class="font-medium"><a class="px-3 inline-block nav-link" href="#impact">Impacto</a></li>
+          <li class="font-medium"><a class="px-3 inline-block nav-link" href="#contact">Contacto</a></li>
+          <li class="ml-8">
+            <a class="bg-zinc-800 items-center py-2 pl-5 pr-2 flex rounded-3xl gap-2 btn-hover btn-dark" href="#contact">
+              <span class="text-white z-10 btn-text">Conectar</span>
+              <div class="bg-lime-300 flex min-w-[2.50rem] min-h-[2.50rem] rounded-full items-center justify-center z-10">
+                <svg class="w-5 h-5 arrow-icon" fill="none" viewBox="0 0 20 20"><path d="M16.6668 9.99988H3.33349" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5004 14.1667C12.5004 14.1667 16.667 11.098 16.667 10C16.667 8.90204 12.5003 5.83337 12.5003 5.83337" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="w-full max-w-[87.50rem] m-auto px-4 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-8">
+      <div class="items-start flex-col justify-start flex gap-10">
+        <div class="items-start flex-col flex gap-6">
+          <div class="text-zinc-800 text-[1.75rem] leading-8">[SALUDO]</div>
+          <h1 class="text-black text-[4rem] lg:text-[6rem] leading-none font-semibold">
+            [NOMBRE] <span class="text-neutral-600">[APELLIDO]</span>
+          </h1>
+          <p>[DESCRIPCION_CORTA]</p>
+        </div>
+        <a class="bg-lime-300 items-center py-2 pl-5 pr-2 flex rounded-3xl gap-2 text-black btn-hover" href="#contact">
+          <span class="z-10 font-medium">Enviar mensaje</span>
+          <div class="bg-zinc-800 flex min-w-[2.50rem] min-h-[2.50rem] rounded-full items-center justify-center z-10">
+            <svg class="w-5 h-5 arrow-icon" fill="none" viewBox="0 0 20 20"><path d="M16.6668 9.99988H3.33349" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5004 14.1667C12.5004 14.1667 16.667 11.098 16.667 10C16.667 8.90204 12.5003 5.83337 12.5003 5.83337" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="flex-col relative flex rounded-2xl gap-5">
+        <div class="relative rounded-2xl overflow-hidden min-h-[500px]">
+          <img class="object-cover w-full h-full min-h-[500px] rounded-2xl" src="[IMAGEN_HERO]" alt="[NOMBRE]">
+          <div class="flex-col absolute right-5 top-7 flex gap-3">
+            <a class="bg-black/35 flex w-12 h-12 border-2 border-white rounded-full items-center justify-center social-icon" href="[LINKEDIN_URL]" target="_blank">
+              <svg class="w-6 h-6" fill="#fff" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a class="bg-black/35 flex w-12 h-12 border-2 border-white rounded-full items-center justify-center social-icon" href="[WEB_URL]" target="_blank">
+              <svg class="w-6 h-6" fill="#fff" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="items-center self-center flex gap-2">
+          <div class="bg-lime-300 w-2 h-2 rounded-full"></div>
+          <div class="text-black">[UBICACION]</div>
+        </div>
+      </div>
+      <div class="items-end flex-col justify-end flex gap-10">
+        <div class="items-start flex-col flex max-w-[18.50rem] gap-6">
+          <div class="border-l-stone-300 border-l-2 pl-3 border-solid text-xl text-zinc-800">[CREDENCIAL_DESTACADA]</div>
+          <div class="text-black text-4xl font-semibold">[CARGO] <span class="text-neutral-600">[EMPRESA]</span></div>
+        </div>
+        <div class="items-start flex-col flex gap-4">
+          <div class="flex items-center">
+            <div class="bg-zinc-800 flex w-12 h-12 -mr-4 border-2 border-white rounded-full items-center justify-center text-white text-xs font-bold">[STAT1]</div>
+            <div class="bg-lime-300 flex w-12 h-12 -mr-4 border-2 border-white rounded-full items-center justify-center text-black text-xs font-bold">[STAT2]</div>
+            <div class="bg-neutral-200 flex w-12 h-12 border-2 border-white rounded-full items-center justify-center text-zinc-700 text-xs font-bold">[STAT3]</div>
+          </div>
+          <div>
+            <div><span class="text-black text-3xl font-semibold">[NUMERO_GRANDE]</span> [LABEL]</div>
+            <div class="text-black text-xl font-medium">[SUBTITULO_STAT]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE ORGANIZACIONES -->
+  <div class="max-w-[87.50rem] overflow-hidden m-auto py-10">
+    <div class="text-center text-black mb-8">[MARQUEE_TITULO]</div>
+    <div class="relative w-full overflow-hidden">
+      <div class="flex animate-marquee items-center gap-[4rem]">
+        <!-- Duplicar items para loop continuo -->
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_1]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_2]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_3]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_4]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_5]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_6]</div>
+        <!-- Duplicados -->
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_1]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_2]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_3]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_4]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_5]</div>
+        <div class="flex-shrink-0 px-6 py-2 border-2 border-neutral-200 rounded-xl text-zinc-700 font-medium">[ORG_6]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-zinc-800 w-full py-16 px-9">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] max-w-[87.50rem] gap-14 m-auto">
+      <div class="flex-col flex gap-10">
+        <div class="text-[2rem] leading-9 text-white font-semibold">
+          [BIO_PRINCIPAL] <span class="text-stone-300">[BIO_DESTACADO]</span>
+        </div>
+        <div class="text-stone-300 text-base leading-7">[BIO_SECUNDARIA]</div>
+        <div class="flex flex-wrap gap-6">
+          <div class="flex items-center gap-2">
+            <div class="bg-lime-300 flex min-w-[3rem] min-h-[3rem] rounded-full items-center justify-center">
+              <svg class="w-6 h-6" fill="#4f4f4f" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg>
+            </div>
+            <div class="flex-col flex">
+              <div class="text-white font-medium">[CONTACTO_1_LABEL]</div>
+              <div class="text-stone-300">[CONTACTO_1_VALOR]</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="bg-lime-300 flex min-w-[3rem] min-h-[3rem] rounded-full items-center justify-center">
+              <svg class="w-6 h-6" fill="#4f4f4f" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            </div>
+            <div class="flex-col flex">
+              <div class="text-white font-medium">[CONTACTO_2_LABEL]</div>
+              <div class="text-stone-300">[CONTACTO_2_VALOR]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-6">
+        <div class="bg-zinc-700 rounded-2xl p-6">
+          <h4 class="text-lime-300 font-medium mb-2">[CARD_1_TAG]</h4>
+          <h3 class="text-white text-xl font-semibold mb-1">[CARD_1_TITULO]</h3>
+          <p class="text-stone-300 text-sm">[CARD_1_DESC]</p>
+        </div>
+        <div class="bg-zinc-700 rounded-2xl p-6">
+          <h4 class="text-lime-300 font-medium mb-2">[CARD_2_TAG]</h4>
+          <h3 class="text-white text-xl font-semibold mb-1">[CARD_2_TITULO]</h3>
+          <p class="text-stone-300 text-sm">[CARD_2_DESC]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-neutral-100 py-16 px-9">
+    <div class="max-w-[87.50rem] m-auto flex flex-col gap-16">
+      <div class="text-center text-[2rem] leading-9 text-black font-semibold max-w-[64rem] mx-auto">
+        [FRASE_STATS] <span class="text-neutral-600 font-medium">[FRASE_STATS_LIGHT]</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border-l-stone-300 border-l-2 px-6 border-solid">
+          <div class="text-[3.5rem] leading-none text-black font-semibold">[STAT_1_NUM]</div>
+          <div class="mt-2">[STAT_1_LABEL]</div>
+        </div>
+        <div class="border-l-stone-300 border-l-2 px-6 border-solid">
+          <div class="text-[3.5rem] leading-none text-black font-semibold">[STAT_2_NUM]</div>
+          <div class="mt-2">[STAT_2_LABEL]</div>
+        </div>
+        <div class="border-l-stone-300 border-l-2 px-6 border-solid">
+          <div class="text-[3.5rem] leading-none text-black font-semibold">[STAT_3_NUM]</div>
+          <div class="mt-2">[STAT_3_LABEL]</div>
+        </div>
+        <div class="border-l-stone-300 border-l-2 px-6 border-solid">
+          <div class="text-[3.5rem] leading-none text-black font-semibold">[STAT_4_NUM]</div>
+          <div class="mt-2">[STAT_4_LABEL]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS DE IMPACTO -->
+  <section id="experience" class="py-20 px-4">
+    <div class="w-full max-w-[87.50rem] m-auto">
+      <div class="flex flex-col gap-12">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center px-4 py-1 border-2 border-zinc-400 rounded-3xl gap-2 w-fit">
+            <div class="bg-zinc-800 w-1.5 h-1.5 rounded-full"></div>
+            <div class="text-black font-medium capitalize text-sm">[SECCION_AREAS_TAG]</div>
+          </div>
+          <h2 class="text-black text-[3.50rem] leading-none font-medium">[AREAS_TITULO] <span class="text-neutral-600">[AREAS_TITULO_LIGHT]</span></h2>
+          <p>[AREAS_DESC]</p>
+        </div>
+        <div class="border-b-neutral-200 border-b-2 py-8 border-solid text-black service-item">
+          <h3 class="text-4xl font-medium mb-4">[AREA_1_TITULO]</h3>
+          <div class="flex flex-col lg:flex-row items-start justify-between gap-5">
+            <div class="flex-col flex max-w-full lg:max-w-[55%] gap-4 text-neutral-600">
+              <p>[AREA_1_DESC]</p>
+              <ul class="pl-5 flex flex-col list-disc gap-2"><li>[AREA_1_ITEM_1]</li><li>[AREA_1_ITEM_2]</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-neutral-200 border-b-2 py-8 border-solid text-black service-item">
+          <h3 class="text-4xl font-medium mb-4">[AREA_2_TITULO]</h3>
+          <div class="flex flex-col lg:flex-row items-start justify-between gap-5">
+            <div class="flex-col flex max-w-full lg:max-w-[55%] gap-4 text-neutral-600">
+              <p>[AREA_2_DESC]</p>
+              <ul class="pl-5 flex flex-col list-disc gap-2"><li>[AREA_2_ITEM_1]</li><li>[AREA_2_ITEM_2]</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-neutral-200 border-b-2 py-8 border-solid text-black service-item">
+          <h3 class="text-4xl font-medium mb-4">[AREA_3_TITULO]</h3>
+          <div class="flex flex-col lg:flex-row items-start justify-between gap-5">
+            <div class="flex-col flex max-w-full lg:max-w-[55%] gap-4 text-neutral-600">
+              <p>[AREA_3_DESC]</p>
+              <ul class="pl-5 flex flex-col list-disc gap-2"><li>[AREA_3_ITEM_1]</li><li>[AREA_3_ITEM_2]</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMAS DE INTERES -->
+  <section class="py-20 px-4">
+    <div class="w-full max-w-[87.50rem] m-auto flex flex-col gap-20">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <div class="flex items-center px-4 py-1 border-2 border-zinc-400 rounded-3xl gap-2">
+          <div class="bg-zinc-800 w-1.5 h-1.5 rounded-full"></div>
+          <div class="text-black font-medium capitalize text-sm">intereses</div>
+        </div>
+        <h2 class="text-black text-[3.50rem] leading-none font-medium">Temas de <span class="text-neutral-600">Interés</span></h2>
+        <p>[INTERESES_DESC]</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="border-2 border-neutral-200 rounded-2xl p-6 flex flex-col justify-between min-h-[18rem] gap-6 card-hover">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-neutral-200 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+          </div>
+          <div class="flex-col flex gap-3">
+            <div class="text-black text-[1.5rem] leading-7 font-medium">[INTERES_1_TITULO]</div>
+            <div class="text-neutral-600 text-base">[INTERES_1_DESC]</div>
+          </div>
+        </div>
+        <div class="border-2 border-neutral-200 rounded-2xl p-6 flex flex-col justify-between min-h-[18rem] gap-6 card-hover">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-neutral-200 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+          </div>
+          <div class="flex-col flex gap-3">
+            <div class="text-black text-[1.5rem] leading-7 font-medium">[INTERES_2_TITULO]</div>
+            <div class="text-neutral-600 text-base">[INTERES_2_DESC]</div>
+          </div>
+        </div>
+        <div class="border-2 border-neutral-200 rounded-2xl p-6 flex flex-col justify-between min-h-[18rem] gap-6 card-hover">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-neutral-200 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          </div>
+          <div class="flex-col flex gap-3">
+            <div class="text-black text-[1.5rem] leading-7 font-medium">[INTERES_3_TITULO]</div>
+            <div class="text-neutral-600 text-base">[INTERES_3_DESC]</div>
+          </div>
+        </div>
+        <div class="border-2 border-neutral-200 rounded-2xl p-6 flex flex-col justify-between min-h-[18rem] gap-6 card-hover">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-neutral-200 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+          </div>
+          <div class="flex-col flex gap-3">
+            <div class="text-black text-[1.5rem] leading-7 font-medium">[INTERES_4_TITULO]</div>
+            <div class="text-neutral-600 text-base">[INTERES_4_DESC]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE DESTACADA -->
+  <section class="bg-zinc-800 py-16 my-8">
+    <div class="max-w-[87.50rem] m-auto px-4 text-center">
+      <div class="text-white text-3xl lg:text-5xl font-semibold">[FRASE_LINE_1]</div>
+      <div class="text-white text-3xl lg:text-5xl font-semibold mt-4">[FRASE_LINE_2]</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA TIMELINE -->
+  <section class="py-20 px-4">
+    <div class="w-full max-w-[87.50rem] m-auto flex flex-col gap-20">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <div class="flex items-center px-4 py-1 border-2 border-zinc-400 rounded-3xl gap-2">
+          <div class="bg-zinc-800 w-1.5 h-1.5 rounded-full"></div>
+          <div class="text-black font-medium capitalize text-sm">trayectoria</div>
+        </div>
+        <h2 class="text-black text-[3.50rem] leading-none font-medium">Experiencia & <span class="text-neutral-600">Educación</span></h2>
+      </div>
+      <div class="flex-col flex">
+        <!-- Repetir este bloque por cada experiencia -->
+        <div class="items-center border-b-neutral-200 border-b-2 justify-between flex border-solid py-6 flex-wrap gap-4 exp-row">
+          <div class="items-center flex gap-6">
+            <div class="w-16 h-16 bg-lime-300 rounded-lg flex items-center justify-center text-2xl font-bold text-zinc-800">[EXP_1_ICONO]</div>
+            <div class="flex-col flex">
+              <div class="text-black text-[1.75rem] leading-8 font-medium">[EXP_1_EMPRESA]</div>
+              <span class="text-neutral-600">[EXP_1_CARGO] · [EXP_1_FECHAS]</span>
+            </div>
+          </div>
+          <div class="flex-col flex gap-1 text-right">
+            <div class="text-xl font-medium">[EXP_1_DURACION]</div>
+            <div class="text-neutral-600">[EXP_1_LUGAR]</div>
+          </div>
+        </div>
+        <div class="items-center border-b-neutral-200 border-b-2 justify-between flex border-solid py-6 flex-wrap gap-4 exp-row">
+          <div class="items-center flex gap-6">
+            <div class="w-16 h-16 bg-blue-200 rounded-lg flex items-center justify-center text-2xl font-bold text-zinc-800">[EXP_2_ICONO]</div>
+            <div class="flex-col flex">
+              <div class="text-black text-[1.75rem] leading-8 font-medium">[EXP_2_EMPRESA]</div>
+              <span class="text-neutral-600">[EXP_2_CARGO] · [EXP_2_FECHAS]</span>
+            </div>
+          </div>
+          <div class="flex-col flex gap-1 text-right">
+            <div class="text-xl font-medium">[EXP_2_DURACION]</div>
+            <div class="text-neutral-600">[EXP_2_LUGAR]</div>
+          </div>
+        </div>
+        <div class="items-center border-b-neutral-200 border-b-2 justify-between flex border-solid py-6 flex-wrap gap-4 exp-row">
+          <div class="items-center flex gap-6">
+            <div class="w-16 h-16 bg-amber-200 rounded-lg flex items-center justify-center text-2xl font-bold text-zinc-800">[EXP_3_ICONO]</div>
+            <div class="flex-col flex">
+              <div class="text-black text-[1.75rem] leading-8 font-medium">[EXP_3_EMPRESA]</div>
+              <span class="text-neutral-600">[EXP_3_CARGO] · [EXP_3_FECHAS]</span>
+            </div>
+          </div>
+          <div class="flex-col flex gap-1 text-right">
+            <div class="text-xl font-medium">[EXP_3_DURACION]</div>
+            <div class="text-neutral-600">[EXP_3_LUGAR]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="py-20 px-4">
+    <div class="w-full max-w-[87.50rem] m-auto flex flex-col gap-20">
+      <div class="flex flex-col items-center gap-6 text-center">
+        <h2 class="text-black text-[3.50rem] leading-none font-medium">Habilidades & <span class="text-neutral-600">Competencias</span></h2>
+      </div>
+      <div class="flex flex-col gap-10">
+        <div class="border-l-stone-300 border-l-2 pl-6 border-solid">
+          <h3 class="text-black text-3xl font-medium mb-2">[SKILL_1_TITULO]</h3>
+          <p class="text-neutral-600 mb-4">[SKILL_1_DESC]</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_1_TAG_1]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_1_TAG_2]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_1_TAG_3]</span>
+          </div>
+        </div>
+        <div class="border-l-stone-300 border-l-2 pl-6 border-solid">
+          <h3 class="text-black text-3xl font-medium mb-2">[SKILL_2_TITULO]</h3>
+          <p class="text-neutral-600 mb-4">[SKILL_2_DESC]</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_2_TAG_1]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_2_TAG_2]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_2_TAG_3]</span>
+          </div>
+        </div>
+        <div class="border-l-stone-300 border-l-2 pl-6 border-solid">
+          <h3 class="text-black text-3xl font-medium mb-2">[SKILL_3_TITULO]</h3>
+          <p class="text-neutral-600 mb-4">[SKILL_3_DESC]</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_3_TAG_1]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_3_TAG_2]</span>
+            <span class="px-4 py-1 border-2 border-neutral-200 rounded-3xl text-neutral-600 text-sm tag-hover">[SKILL_3_TAG_3]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section id="contact" class="py-20 px-4">
+    <div class="w-full max-w-[87.50rem] m-auto">
+      <div class="flex flex-col items-center gap-6 text-center mb-20">
+        <h2 class="text-black text-[3.5rem] lg:text-[5rem] leading-none font-semibold">Conectemos <span class="text-neutral-600">Juntos</span></h2>
+        <div class="w-full max-w-[28rem]">
+          <form class="grid grid-cols-[1fr_auto] gap-2">
+            <input class="py-2 px-4 border-2 border-neutral-200 rounded-3xl outline-none" placeholder="Tu correo electrónico" type="email">
+            <input class="text-white bg-zinc-800 cursor-pointer py-3 px-8 rounded-3xl font-medium btn-green-hover" type="submit" value="Enviar">
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <a class="py-2 px-4 border-2 border-neutral-200 rounded-3xl tag-hover btn-green-hover" href="[LINK_1_URL]" target="_blank">[LINK_1]</a>
+        <a class="py-2 px-4 border-2 border-neutral-200 rounded-3xl tag-hover btn-green-hover" href="[LINK_2_URL]" target="_blank">[LINK_2]</a>
+        <a class="py-2 px-4 border-2 border-neutral-200 rounded-3xl tag-hover btn-green-hover" href="[LINK_3_URL]" target="_blank">[LINK_3]</a>
+      </div>
+      <div class="items-center border-t-2 justify-between py-5 flex flex-wrap gap-4 border-stone-300 text-sm">
+        <div class="flex flex-wrap gap-4">
+          <span>[NOMBRE_COMPLETO]</span><span>·</span><span>[CARGO_EMPRESA]</span><span>·</span><span>[CIUDAD]</span>
+        </div>
+        <div class="text-neutral-500">
+          Hecho por <a class="underline hover:text-lime-500 transition-colors" href="https://localrank.com.co" target="_blank">localrank.com.co</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script>
+    const els=document.querySelectorAll('section > div, .card-hover, .project-card');
+    const reveal=()=>{els.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-100){el.style.opacity='1';el.style.transform='translateY(0)'}})};
+    els.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(30px)';el.style.transition='opacity .8s ease, transform .8s ease'});
+    window.addEventListener('scroll',reveal);window.addEventListener('load',reveal);
+    const hdr=document.querySelector('header');
+    window.addEventListener('scroll',()=>{hdr.style.background=window.scrollY>50?'rgba(255,255,255,.95)':'transparent';hdr.style.backdropFilter=window.scrollY>50?'blur(20px)':'none'});
+  </script>
+</body>
+</html>
