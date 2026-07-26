@@ -1,0 +1,149 @@
+============================================
+DATOS PARA SITIO WEB DE MARCA PERSONAL
+============================================
+
+--- HERO ---
+[NOMBRE]: 
+[APELLIDO]: 
+[SALUDO]: Hola, soy
+[CARGO]: 
+[EMPRESA]: 
+[DESCRIPCION_CORTA]: 
+[IMAGEN_HERO]: foto.jpg
+[UBICACION]: 
+[CREDENCIAL_DESTACADA]: 
+[LINKEDIN_URL]: 
+[WEB_URL]: 
+
+--- STATS HERO (circulos) ---
+[STAT1]: 
+[STAT2]: 
+[STAT3]: 
+[NUMERO_GRANDE]: 
+[LABEL]: 
+[SUBTITULO_STAT]: 
+
+--- MARQUEE ORGANIZACIONES ---
+[MARQUEE_TITULO]: Organizaciones donde ha tenido impacto
+[ORG_1]: 
+[ORG_2]: 
+[ORG_3]: 
+[ORG_4]: 
+[ORG_5]: 
+[ORG_6]: 
+
+--- ABOUT / BIO ---
+[BIO_PRINCIPAL]: 
+[BIO_DESTACADO]: 
+[BIO_SECUNDARIA]: 
+[CONTACTO_1_LABEL]: 
+[CONTACTO_1_VALOR]: 
+[CONTACTO_2_LABEL]: 
+[CONTACTO_2_VALOR]: 
+
+--- CARDS ABOUT ---
+[CARD_1_TAG]: 
+[CARD_1_TITULO]: 
+[CARD_1_DESC]: 
+[CARD_2_TAG]: 
+[CARD_2_TITULO]: 
+[CARD_2_DESC]: 
+
+--- STATS ---
+[FRASE_STATS]: 
+[FRASE_STATS_LIGHT]: 
+[STAT_1_NUM]: 
+[STAT_1_LABEL]: 
+[STAT_2_NUM]: 
+[STAT_2_LABEL]: 
+[STAT_3_NUM]: 
+[STAT_3_LABEL]: 
+[STAT_4_NUM]: 
+[STAT_4_LABEL]: 
+
+--- AREAS DE IMPACTO ---
+[AREAS_TITULO]: 
+[AREAS_TITULO_LIGHT]: 
+[AREAS_DESC]: 
+[AREA_1_TITULO]: 
+[AREA_1_DESC]: 
+[AREA_1_ITEM_1]: 
+[AREA_1_ITEM_2]: 
+[AREA_2_TITULO]: 
+[AREA_2_DESC]: 
+[AREA_2_ITEM_1]: 
+[AREA_2_ITEM_2]: 
+[AREA_3_TITULO]: 
+[AREA_3_DESC]: 
+[AREA_3_ITEM_1]: 
+[AREA_3_ITEM_2]: 
+
+--- TEMAS DE INTERES ---
+[INTERESES_DESC]: 
+[INTERES_1_TITULO]: 
+[INTERES_1_DESC]: 
+[INTERES_2_TITULO]: 
+[INTERES_2_DESC]: 
+[INTERES_3_TITULO]: 
+[INTERES_3_DESC]: 
+[INTERES_4_TITULO]: 
+[INTERES_4_DESC]: 
+
+--- FRASE DESTACADA ---
+[FRASE_LINE_1]: 
+[FRASE_LINE_2]: 
+
+--- EXPERIENCIA ---
+[EXP_1_ICONO]: 
+[EXP_1_EMPRESA]: 
+[EXP_1_CARGO]: 
+[EXP_1_FECHAS]: 
+[EXP_1_DURACION]: 
+[EXP_1_LUGAR]: 
+[EXP_2_ICONO]: 
+[EXP_2_EMPRESA]: 
+[EXP_2_CARGO]: 
+[EXP_2_FECHAS]: 
+[EXP_2_DURACION]: 
+[EXP_2_LUGAR]: 
+[EXP_3_ICONO]: 
+[EXP_3_EMPRESA]: 
+[EXP_3_CARGO]: 
+[EXP_3_FECHAS]: 
+[EXP_3_DURACION]: 
+[EXP_3_LUGAR]: 
+
+--- HABILIDADES ---
+[SKILL_1_TITULO]: 
+[SKILL_1_DESC]: 
+[SKILL_1_TAG_1]: 
+[SKILL_1_TAG_2]: 
+[SKILL_1_TAG_3]: 
+[SKILL_2_TITULO]: 
+[SKILL_2_DESC]: 
+[SKILL_2_TAG_1]: 
+[SKILL_2_TAG_2]: 
+[SKILL_2_TAG_3]: 
+[SKILL_3_TITULO]: 
+[SKILL_3_DESC]: 
+[SKILL_3_TAG_1]: 
+[SKILL_3_TAG_2]: 
+[SKILL_3_TAG_3]: 
+
+--- FOOTER ---
+[LINK_1]: 
+[LINK_1_URL]: 
+[LINK_2]: 
+[LINK_2_URL]: 
+[LINK_3]: 
+[LINK_3_URL]: 
+[NOMBRE_COMPLETO]: 
+[CARGO_EMPRESA]: 
+[CIUDAD]: 
+
+============================================
+INSTRUCCIONES:
+- Llena los campos
+- Adjunta la foto del hero como "foto.jpg"
+- Pasame este archivo + la imagen y genero el sitio
+============================================
