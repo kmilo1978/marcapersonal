@@ -1,10 +1,6 @@
-# Marca Personal — David Escobar Arango
+# Plantilla Web - Marca Personal
 
-Sitio web de marca personal para **David Escobar Arango**, Director de [Comfama](https://www.comfama.com).
-
-## Sobre el proyecto
-
-Landing page profesional que presenta el perfil, trayectoria, logros y publicaciones de David Escobar Arango, ejecutivo colombiano con más de 25 años de experiencia en telecomunicaciones, sector público, salud, educación y organizaciones sociales.
+Plantilla reutilizable para sitios web de marca personal. Diseño moderno, responsive y con efectos interactivos.
 
 ## Tecnologías
 
@@ -12,7 +8,6 @@ Landing page profesional que presenta el perfil, trayectoria, logros y publicaci
 - Tailwind CSS (CDN)
 - JavaScript vanilla
 - Google Fonts (Inter)
-- Imágenes de Pexels
 
 ## Características
 
@@ -22,9 +17,16 @@ Landing page profesional que presenta el perfil, trayectoria, logros y publicaci
 - Botones con efecto hover verde (lime-300)
 - Secciones: Hero, Organizaciones, Acerca de, Stats, Áreas de impacto, Temas de interés, Habilidades, Experiencia, Resultados, Publicaciones, CTA, Contacto
 
-## Vista previa
+## Uso
 
-Abrir `index.html` en cualquier navegador.
+1. Llenar el archivo `datos-perfil.txt` con la información del cliente
+2. Colocar la imagen del hero como `foto.jpg` en la carpeta
+3. Reemplazar los placeholders `[VARIABLE]` en `template.html`
+
+## Archivos
+
+- `template.html` — Plantilla con placeholders lista para personalizar
+- `datos-perfil.txt` — Formulario de datos a llenar por cliente
 
 ## Créditos
 
